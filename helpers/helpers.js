@@ -126,6 +126,19 @@ const numberOfOrders = month => {
   return number;
 };
 
+const minMaxAverageOrders = ()=> {
+    let ordersMonth = [];
+    let min, max, average;
+    for (month in mlist) {
+        const result = numberOfOrders(mlist[month]);
+        ordersMonth.push(result);
+    }
+    min = Math.min(...ordersMonth);
+    max = Math.max(...ordersMonth);
+    average = (max-min)/ordersMonth.length;
+    return {min: min, max: max, average: average};
+}
+
 readFile();
 
 module.exports = {
@@ -134,7 +147,5 @@ module.exports = {
   maxQuantitySold,
   salesMonth,
   calculateSales,
-  addKeys,
-  setHeaderRowAsKeys,
-  readFile
+  minMaxAverageOrders
 };

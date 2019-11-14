@@ -8,5 +8,6 @@ Router.get('/monthly-sales/:month',salesController.monthWiseSales);
 Router.get('/most-popular/:month',salesController.mostPopularItem);
 Router.get('/most-revenue/:month',salesController.mostRevenueItem);
 Router.get('/number-orders/:month',salesController.numberOrders);
+Router.get('/min-max-average',salesController.minMaxAverageOrders);
 
 module.exports = Router;
