@@ -3,7 +3,6 @@ const express = require('express');
 const Router = express.Router();
 const salesController = require('../controller/sales');
 
-Router.get('/convert-file',salesController.convertFile);
 Router.get('/total-sales',salesController.totalSales);
 Router.get('/monthly-sales/:month',salesController.monthWiseSales);
 Router.get('/most-popular/:month',salesController.mostPopularItem);
