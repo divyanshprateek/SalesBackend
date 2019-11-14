@@ -139,6 +139,14 @@ const minMaxAverageOrders = ()=> {
     return {min: min, max: max, average: average};
 }
 
+const getItems = ()=> {
+  const newItem = [];
+  for (let i = 0; i < 10; i++) {
+    newItem.push(salesData[i]);
+  }
+  return newItem;
+}
+
 readFile();
 
 module.exports = {
@@ -147,5 +155,6 @@ module.exports = {
   maxQuantitySold,
   salesMonth,
   calculateSales,
-  minMaxAverageOrders
+  minMaxAverageOrders,
+  getItems
 };

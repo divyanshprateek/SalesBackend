@@ -42,3 +42,8 @@ exports.minMaxAverageOrders = (req, res, next)=> {
     const num = Helpers.minMaxAverageOrders();
     res.json(num);
 }
+
+exports.getItems = (req, res, next)=> {
+    const items = Helpers.getItems();
+    res.json(items);
+}
