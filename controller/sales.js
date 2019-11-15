@@ -39,7 +39,7 @@ exports.numberOrders = (req, res, next)=> {
 }
 
 exports.minMaxAverageOrders = (req, res, next)=> {
-    const num = Helpers.minMaxAverageOrders();
+    const num = Helpers.minMaxAverage();
     res.json(num);
 }
 
